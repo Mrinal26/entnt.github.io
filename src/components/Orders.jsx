@@ -1,4 +1,3 @@
-// src/components/Orders.jsx
 import React, { useState } from 'react';
 
 const Orders = () => {
@@ -7,7 +6,6 @@ const Orders = () => {
   const [orders, setOrders] = useState([
     { id: 1, customerName: 'Customer A', orderDate: '2022-03-15', status: 'Pending' },
     { id: 2, customerName: 'Customer B', orderDate: '2022-03-16', status: 'Shipped' },
-    // Add more mock orders as needed
   ]);
 
   const [newOrder, setNewOrder] = useState({ ...initialOrder });
@@ -38,8 +36,6 @@ const Orders = () => {
   return (
     <div>
       <h1>Orders Management</h1>
-
-      {/* Display order list */}
       <ul>
         {orders.map((order) => (
           <li key={order.id}>
@@ -50,7 +46,6 @@ const Orders = () => {
         ))}
       </ul>
 
-      {/* Add new order form */}
       <div>
         <h2>Add/Edit Order</h2>
         <input

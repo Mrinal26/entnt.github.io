@@ -1,14 +1,11 @@
-// src/components/Dashboard.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-// import './Dashboard.css'; // Import your minimal styling
 
 const Dashboard = ({ totalProducts, totalOrders }) => {
   return (
     <div className="dashboard-container">
       <h1>Dashboard</h1>
 
-      {/* Display key metrics or features */}
       <div className="key-metrics">
         <div className="metric-card">
           <h2>Total Products</h2>
@@ -18,10 +15,8 @@ const Dashboard = ({ totalProducts, totalOrders }) => {
           <h2>Total Orders</h2>
           <p>{totalOrders}</p>
         </div>
-        {/* Add more metric cards as needed */}
       </div>
 
-      {/* Quick navigation links */}
       <div className="navigation-links">
         <Link to="/products" className="nav-link">
           <div className="nav-card">
