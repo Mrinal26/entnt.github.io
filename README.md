@@ -19,7 +19,10 @@ Order-mangement Page
 
 Calendar-view page
 ![image (25)](https://github.com/Mrinal26/entnt.github.io/assets/89139773/9331cf92-00eb-420f-ac3c-5f2884294f28)
+
 Responsiveness in all pages
+
 ![image (27)](https://github.com/Mrinal26/entnt.github.io/assets/89139773/452710e1-a5c2-44f2-8062-e73ac0a3c18b)
+
 
 ![image (26)](https://github.com/Mrinal26/entnt.github.io/assets/89139773/1b2f4571-2f54-4e9d-82a1-2fbad82ad1da)
