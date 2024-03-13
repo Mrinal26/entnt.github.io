@@ -1,0 +1,39 @@
+/* CalendarView.module.css */
+
+.calendarContainer {
+    text-align: center;
+    margin: auto;
+  }
+  
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .calendarWrapper{
+    width: 350px;
+    margin: auto;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .event {
+    background-color: #89ac8a;
+    color: white;
+    border-radius: 50%;
+    padding: 5px;
+  }
+  
+  .selectedDate {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+  }
+  .selectedDateInfo>h3, .selectedDateInfo>p , .selectedDateInfo>h2{
+    font-weight: bolder;
+    font-family: 'Courier New', Courier, monospace;
+
+  }
+  

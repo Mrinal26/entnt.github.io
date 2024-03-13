@@ -1,13 +1,13 @@
 /* Orders.module.css */
 
 /* General Styles */
-.title {
+.titleo {
     font-size: 28px;
     font-weight: bold;
     text-align: center;
     margin-bottom: 20px;
   }
-  .table{
+  .tableo{
     
     width: 60%;
     margin: auto;
@@ -41,7 +41,7 @@
   }
   
   /* Form Styles */
-  .formContainer {
+  .formContainero {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,7 +61,7 @@
     box-sizing: border-box;
   }
   
-  .formContainer>button {
+  .formContainero>button {
     background-color: #4caf50;
     color: black;
     cursor: pointer;
@@ -75,4 +75,18 @@
   button:hover {
     background-color: #45a049;
   }
+  @media screen and (max-width: 1200px) {
+    .tableo {
+      width: 80%;
+    }
+  }
   
+  @media screen and (max-width: 800px) {
+    .tableo {
+      width: 90%;
+    }
+  
+    .formContainero {
+      width: 90%;
+    }
+  }

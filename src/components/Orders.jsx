@@ -44,8 +44,8 @@ const Orders = () => {
 
   return (
     <div>
-      <h1 className={styles.title}>Orders Management</h1>
-      <ul className={styles.table}>
+      <h1 className={styles.titleo}>Orders Management</h1>
+      <ul className={styles.tableo}>
         {orders.map((order) => (
           <li key={order.id}>
             Order ID: {order.id} - Customer: {order.customerName} - Date: {order.orderDate} - Status: {order.status}
@@ -55,7 +55,7 @@ const Orders = () => {
         ))}
       </ul>
 
-      <div className={styles.formContainer}>
+      <div className={styles.formContainero}>
         <h2>Add/Edit Order</h2>
         <input
           type="text"

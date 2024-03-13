@@ -3,7 +3,7 @@ import styles from '../components/Products.module.css';
 import { v4 as uuidv4 } from 'uuid'; 
 
 const Products = () => {
-  const initialProduct = { id: 0, name: '', category: '', price: 0, stockQuantity: 0 };
+  const initialProduct = { id: 0, name: '', category: '', price:null , stockQuantity: null };
 
   const initialProducts = JSON.parse(localStorage.getItem('products')) || [
     { id: uuidv4(), name: 'Product 1', category: 'Category A', price: 20, stockQuantity: 50 },
@@ -45,9 +45,9 @@ const Products = () => {
 
   return (
     <div>
-      <h1 className={styles.title}>Products Management</h1>
+      <h1 className={styles.titlep}>Products Management</h1>
 
-      <table className={styles.table}>
+      <table className={styles.tablep}>
         <thead>
           <tr>
             <th>Name</th>
@@ -65,15 +65,17 @@ const Products = () => {
               <td>${product.price}</td>
               <td>{product.stockQuantity}</td>
               <td>
+                <button className={styles.deleteButtonp} onClick={() => deleteProduct(product.id)}>
+                  Delete
+                </button>
                 <button onClick={() => editProductHandler(product)}>Edit</button>
-                <button onClick={() => deleteProduct(product.id)}>Delete</button>
               </td>
             </tr>
           ))}
         </tbody>
       </table>
 
-      <div className={styles.formContainer}>
+      <div className={styles.formContainerp}>
         <h2>Add/Edit Product</h2>
         <form>
           <label>Name</label>
@@ -109,9 +111,13 @@ const Products = () => {
           />
 
           {editProduct ? (
-            <button onClick={updateProduct}>Update Product</button>
+            <button className={styles.updateButtonp} onClick={updateProduct}>
+              Update Product
+            </button>
           ) : (
-            <button onClick={addProduct}>Add Product</button>
+            <button className={styles.addButtonp} onClick={addProduct}>
+              Add Product
+            </button>
           )}
         </form>
       </div>

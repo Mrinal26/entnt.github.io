@@ -52,7 +52,7 @@ const Dashboard = () => {
           <div className={style.navcard}>
             <h2>Calendar View</h2>
             <img src={spinner} alt="Spinner" />
-            <p>View your orders on a calendar</p>
+            <p>View your orders </p>
           </div>
         </Link>
       </div>

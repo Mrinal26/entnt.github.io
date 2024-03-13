@@ -1,32 +1,35 @@
+/* Products.module.css */
+
 /* General Styles */
-.title {
+.titlep {
     font-size: 28px;
     font-weight: bold;
-    margin-bottom: 20px;
     text-align: center;
-}
-
-/* Table Styles */
-.table {
+    margin-bottom: 20px;
+  }
+  
+  /* Table Styles */
+  .tablep {
     width: 70%;
     margin: auto;
     border-collapse: collapse;
     margin-bottom: 20px;
-}
-
-th, td {
+  }
+  
+  th,
+  td {
     border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
-}
-
-th {
+  }
+  
+  th {
     background-color: #f2f2f2;
     font-weight: bold;
-}
-
-/* Form Styles */
-.formContainer {
+  }
+  
+  /* Form Styles */
+  .formContainerp {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -38,31 +41,61 @@ th {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     margin-top: 20px;
   }
-
-label {
+  
+  label {
     font-weight: bold;
     margin-bottom: 8px;
-}
-
-input {
+  }
+  
+  .formContainerp > input {
     margin-bottom: 16px;
     padding: 12px;
     width: 100%;
     box-sizing: border-box;
-}
-
-button {
+  }
+  
+  /* Button Styles */
+  .button {
     padding: 12px;
-    background-color: #4caf50;
-    color: white;
     cursor: pointer;
     border: none;
     border-radius: 5px;
     font-size: 18px;
     font-weight: bold;
     transition: background-color 0.3s;
-}
-
-button:hover {
+  }
+  
+  .addButtonp {
+    background-color: red;
+    border-radius: 10px;
+    color: white;
+    padding: 10px;
+  }
+  
+  .updateButtonp {
+    background-color: red;
+    color: white;
+    padding: 10px;
+  }
+  
+  .deleteButtonp {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-right: 10px;
+  }
+  
+  .button:hover {
     background-color: #45a049;
-}
+  }
+  @media screen and (max-width: 768px) {
+    .tablep {
+      width: 90%;
+    }
+  
+    .formContainerp {
+      width: 90%;
+      max-width: 100%;
+    }
+  }
