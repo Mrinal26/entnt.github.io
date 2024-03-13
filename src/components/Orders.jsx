@@ -1,18 +1,26 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import styles from '../components/Orders.module.css';
+import { v4 as uuidv4 } from 'uuid';
 
 const Orders = () => {
   const initialOrder = { id: 0, customerName: '', orderDate: '', status: '' };
-
-  const [orders, setOrders] = useState([
+  
+  const initialOrders = JSON.parse(localStorage.getItem('orders')) || [
     { id: 1, customerName: 'Customer A', orderDate: '2022-03-15', status: 'Pending' },
     { id: 2, customerName: 'Customer B', orderDate: '2022-03-16', status: 'Shipped' },
-  ]);
+  ];
 
+  const [orders, setOrders] = useState(initialOrders);
   const [newOrder, setNewOrder] = useState({ ...initialOrder });
   const [editOrder, setEditOrder] = useState(null);
 
+  useEffect(() => {
+    localStorage.setItem('orders', JSON.stringify(orders));
+  }, [orders]);
+
   const addOrder = () => {
-    setOrders([...orders, { id: orders.length + 1, ...newOrder }]);
+    const newOrderWithId = { ...newOrder, id: uuidv4() };
+    setOrders([...orders, newOrderWithId]);
     setNewOrder({ ...initialOrder });
   };
 
@@ -20,6 +28,7 @@ const Orders = () => {
     setEditOrder(order);
     setNewOrder(order);
   };
+  
 
   const updateOrder = () => {
     setOrders((prevOrders) =>
@@ -35,8 +44,8 @@ const Orders = () => {
 
   return (
     <div>
-      <h1>Orders Management</h1>
-      <ul>
+      <h1 className={styles.title}>Orders Management</h1>
+      <ul className={styles.table}>
         {orders.map((order) => (
           <li key={order.id}>
             Order ID: {order.id} - Customer: {order.customerName} - Date: {order.orderDate} - Status: {order.status}
@@ -46,7 +55,7 @@ const Orders = () => {
         ))}
       </ul>
 
-      <div>
+      <div className={styles.formContainer}>
         <h2>Add/Edit Order</h2>
         <input
           type="text"

@@ -4,13 +4,14 @@ import Dashboard from './components/Dashboard';
 import Products from './components/Products';
 import Orders from './components/Orders';
 import CalendarView from './components/CalendarView';
-
+import Navbar from './components/Navbar';
 const App = () => {
   const totalProducts = 100;
   const totalOrders = 50;
 
   return (
     <Router>
+      <Navbar/>
       <Routes>
         <Route
           path="/"

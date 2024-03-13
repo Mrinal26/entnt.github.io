@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
 const CalendarView = () => {
-  
-  const calendarEvents = [
-    { id: 1, title: 'Order 1', date: new Date(2022, 2, 15) }, // Note: Months are zero-indexed
-    { id: 2, title: 'Order 2', date: new Date(2022, 2, 16) },
-    
-  ];
-
+  const [calendarEvents, setCalendarEvents] = useState([]);
   const [selectedDate, setSelectedDate] = useState(null);
+
+  useEffect(() => {
+    const storedEvents = JSON.parse(localStorage.getItem('calendarEvents')) || [
+      { id: 1, title: 'Order 1', date: new Date(2022, 2, 15) },
+      { id: 2, title: 'Order 2', date: new Date(2022, 2, 16) },
+    ];
+
+    setCalendarEvents(storedEvents);
+  }, []);
 
   const handleDateClick = (date) => {
     setSelectedDate(date);
@@ -20,7 +23,6 @@ const CalendarView = () => {
     <div>
       <h1>Calendar View</h1>
 
-      
       <Calendar
         onClickDay={(date) => handleDateClick(date)}
         tileContent={({ date, view }) => {

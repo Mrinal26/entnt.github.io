@@ -1,0 +1,68 @@
+/* General Styles */
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Table Styles */
+.table {
+    width: 70%;
+    margin: auto;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Form Styles */
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: auto;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+  }
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+input {
+    margin-bottom: 16px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 12px;
+    background-color: #4caf50;
+    color: white;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
